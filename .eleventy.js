@@ -1,9 +1,9 @@
 module.exports = function(eleventyConfig) {
-  // 確保 assets 會被複製到 _site/assets 底下
+  // 把 src/assets 複製到輸出資料夾的 /assets
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
   return {
-    // ⚠️ 這裡要填你的 repo 名稱（如果 repo 名稱不同要改）
+    // ⚠ repo 名稱（如果你的 GitHub repo 不是這個，要改成一樣的）
     pathPrefix: "/bootstrap5-landing-eleventy/",
     dir: {
       input: "src",
