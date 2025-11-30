@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GlowLab Shampoo - Salon Grade RWD Landing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="使用 Bootstrap 5 與 SCSS 客製化主題建立的洗髮精品牌 RWD Landing Page 示範。" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body class="page page--home">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <span class="text-primary">Glow</span>Lab
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="切換導覽"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#features">產品特色</a></li>
+            <li class="nav-item"><a class="nav-link" href="#plans">方案價格</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">索取試用</a></li>
+          </ul>
+          <a href="#contact" class="btn btn-primary ms-lg-3 mt-2 mt-lg-0">立即諮詢</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <span class="hero__badge badge rounded-pill text-bg-primary mb-3">
+          NEW · SALON GRADE FORMULA
+        </span>
+        <h1 class="hero__title display-5 mb-3">
+          讓品牌洗髮精，<br class="d-none d-md-inline" />在官網上也有「專業感」。
+        </h1>
+        <p class="hero__subtitle text-muted mb-4">
+          GlowLab Shampoo 示範站：以 Bootstrap 5 + SCSS 變數客製化建立，
+          展示洗髮精品牌如何利用 RWD 形象頁呈現產品特色、方案價格與索取試用流程。
+        </p>
+        <div class="d-flex flex-column flex-sm-row gap-3">
+          <a href="#plans" class="btn btn-primary btn-lg px-4">查看方案價格</a>
+          <a href="#features" class="btn btn-outline-secondary btn-lg px-4">了解產品特色</a>
+        </div>
+        <div class="mt-4 d-flex align-items-center gap-3">
+          <div class="d-flex">
+            <div class="rounded-circle bg-secondary-subtle" style="width:40px;height:40px;"></div>
+            <div class="rounded-circle bg-secondary-subtle ms-n2" style="width:40px;height:40px;"></div>
+            <div class="rounded-circle bg-secondary-subtle ms-n2" style="width:40px;height:40px;"></div>
+          </div>
+          <span class="text-muted small">
+            超過 120 間髮廊品牌使用類似架構建立形象網站
+          </span>
+        </div>
+      </div>
+      <div class="col-lg-5 offset-lg-1">
+        <div class="card shadow-lg border-0 plan-grid__item">
+          <div class="card-body p-4">
+            <span class="badge text-bg-secondary mb-3">即刻體驗 Demo</span>
+            <h2 class="h4 mb-3">這是一個可放進履歷的示範專案</h2>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li class="mb-2">• 使用 <strong>Bootstrap 5 SCSS</strong> 自行編譯主題色與圓角</li>
+              <li class="mb-2">• 採用 <strong>BEM 命名</strong> 結構化樣式</li>
+              <li class="mb-2">• 使用 <strong>Eleventy (11ty)</strong> 作為 SSG 產生靜態 HTML</li>
+            </ul>
+            <div class="d-flex align-items-end justify-content-between">
+              <div>
+                <div class="text-muted small mb-1">示範專案型態</div>
+                <div class="plan-grid__price">Landing Page</div>
+              </div>
+              <span class="badge rounded-pill text-bg-success">
+                HTML5 / SCSS / Bootstrap 5
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-5">
+        <h2 class="h3 mb-3">為洗髮精品牌設計的三大版面重點</h2>
+        <p class="text-muted mb-4">
+          以下區塊可以在實際接案時依品牌內容替換，
+          目前示範如何用 Bootstrap 的 Grid + Utility 迅速完成排版。
+        </p>
+        <div class="feature-list d-flex flex-column gap-3">
+          <div class="feature-list__item">
+            <div class="feature-list__icon bg-primary-subtle text-primary">
+              <span class="fw-bold">1</span>
+            </div>
+            <div>
+              <h3 class="h6 mb-1">產品功效清楚分區</h3>
+              <p class="text-muted small mb-0">
+                針對油性、乾燥、染後受損等不同髮質以卡片方式呈現，方便使用者快速理解。
+              </p>
+            </div>
+          </div>
+          <div class="feature-list__item">
+            <div class="feature-list__icon bg-primary-subtle text-primary">
+              <span class="fw-bold">2</span>
+            </div>
+            <div>
+              <h3 class="h6 mb-1">行動裝置優先（Mobile First）</h3>
+              <p class="text-muted small mb-0">
+                利用 Bootstrap RWD Grid，確保在手機上也有舒適的閱讀體驗。
+              </p>
+            </div>
+          </div>
+          <div class="feature-list__item">
+            <div class="feature-list__icon bg-primary-subtle text-primary">
+              <span class="fw-bold">3</span>
+            </div>
+            <div>
+              <h3 class="h6 mb-1">明確的轉換行為（CTA）</h3>
+              <p class="text-muted small mb-0">
+                頁面多處放置「索取試用」「預約諮詢」按鈕，引導使用者留下聯絡資訊。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 offset-lg-1">
+        <div class="row g-3">
+          <div class="col-6">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <span class="badge text-bg-light mb-2">成分安心</span>
+                <h3 class="h6 mb-2">無矽靈 / 無動物實驗</h3>
+                <p class="text-muted small mb-0">
+                  以品牌故事搭配關鍵成分介紹，建立消費者信任感。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <span class="badge text-bg-light mb-2">專業背書</span>
+                <h3 class="h6 mb-2">設計師推薦實證</h3>
+                <p class="text-muted small mb-0">
+                  可替換為實際沙龍照片與推薦語，強化專業形象。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                <div>
+                  <h3 class="h6 mb-1">這個專案可以怎麼寫在履歷上？</h3>
+                  <p class="text-muted small mb-0">
+                    使用 Eleventy 建立可維護的多頁結構，並以 SCSS 變數覆蓋 Bootstrap 5
+                    預設主題色，採 BEM 命名管理客製化區塊樣式。
+                  </p>
+                </div>
+                <a href="#contact" class="btn btn-outline-primary btn-sm flex-shrink-0">查看技術細節</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="plans" class="py-5 bg-body-tertiary">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="h3 mb-2">方案區塊（可改為實際品牌售價）</h2>
+      <p class="text-muted small mb-0">
+        目前僅示範排版與元件使用，實務上可替換為 FAQ、方案或門市資訊。
+      </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm plan-grid__item">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5">入門體驗組</h3>
+            <p class="text-muted small">
+              適合剛起步的個人品牌或單一髮廊據點。
+            </p>
+            <div class="plan-grid__price mb-3">NT$ 1,980</div>
+            <ul class="small text-muted mb-4">
+              <li class="mb-1">單一 Landing Page 設計</li>
+              <li class="mb-1">RWD 版型套版與調整</li>
+              <li class="mb-1">基本 SEO 標題與描述設定</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline-primary mt-auto">索取報價範本</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-2 border-primary shadow plan-grid__item">
+          <div class="card-body d-flex flex-column">
+            <span class="badge text-bg-primary align-self-start mb-2">熱門</span>
+            <h3 class="h5">品牌形象站</h3>
+            <p class="text-muted small">
+              適合需要完整品牌頁與產品線介紹的品牌。
+            </p>
+            <div class="plan-grid__price mb-3">NT$ 4,980</div>
+            <ul class="small text-muted mb-4">
+              <li class="mb-1">最多 5 個頁面（關於我們 / 產品 / FAQ / 聯絡）</li>
+              <li class="mb-1">Bootstrap 5 + SSG 產生靜態頁面</li>
+              <li class="mb-1">基本 GA / 追蹤碼嵌入</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary mt-auto">了解完整內容</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm plan-grid__item">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5">進階內容行銷</h3>
+            <p class="text-muted small">
+              搭配部落格內容、使用者評論與 FAQ。
+            </p>
+            <div class="plan-grid__price mb-3">NT$ 7,980</div>
+            <ul class="small text-muted mb-4">
+              <li class="mb-1">文章列表與單篇文章版型</li>
+              <li class="mb-1">可擴充 FAQ 與使用者心得模組</li>
+              <li class="mb-1">可與未來 Vue / CSR 專案銜接</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline-secondary mt-auto">規劃內容架構</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-5">
+        <h2 class="h4 mb-3">索取試用 / 接案諮詢表單示範</h2>
+        <p class="text-muted small mb-3">
+          下方表單區塊示範如何使用 Bootstrap 5 表單元件快速建立可用表單，
+          實際接案時可串接後端或第三方表單服務（如 Google Forms、Typeform）。
+        </p>
+        <ul class="small text-muted mb-0">
+          <li class="mb-1">此專案採用 <strong>BEM 命名</strong> 管理客製化樣式。</li>
+          <li class="mb-1">使用 <strong>SCSS 變數</strong> 調整主題色、圓角、字體。</li>
+          <li class="mb-1">搭配 <strong>Eleventy SSG</strong> 產出可部署至任何靜態主機的 HTML。</li>
+        </ul>
+      </div>
+      <div class="col-lg-7">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">聯絡人姓名</label>
+                <input type="text" class="form-control" id="name" placeholder="請輸入您的姓名" />
+              </div>
+              <div class="col-md-6">
+                <label for="brand" class="form-label">品牌 / 店家名稱</label>
+                <input type="text" class="form-control" id="brand" placeholder="例：GlowLab 髮藝沙龍" />
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" />
+              </div>
+              <div class="col-md-6">
+                <label for="line" class="form-label">LINE ID（選填）</label>
+                <input type="text" class="form-control" id="line" placeholder="@yourlineid" />
+              </div>
+              <div class="col-12">
+                <label for="goal" class="form-label">想達成的目標</label>
+                <select id="goal" class="form-select">
+                  <option selected>請選擇</option>
+                  <option>建立品牌形象官網</option>
+                  <option>導流至門市或電商平台</option>
+                  <option>增加表單填寫與預約諮詢</option>
+                  <option>其他（備註欄說明）</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">備註說明</label>
+                <textarea id="message" rows="4" class="form-control" placeholder="簡單描述目前網站狀況與預算範圍，方便回覆時提供具體建議。"></textarea>
+              </div>
+              <div class="col-12 d-flex justify-content-between align-items-center">
+                <div class="form-check small text-muted">
+                  <input class="form-check-input" type="checkbox" value="" id="agree" />
+                  <label class="form-check-label" for="agree">
+                    我同意網站使用者條款與隱私權政策
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary px-4">送出表單（示範）</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    <footer class="site-footer border-top py-4 mt-5">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <div class="text-muted">
+          © <span data-year></span> GlowLab Shampoo. All rights reserved.
+        </div>
+        <div class="d-flex gap-3">
+          <a href="#" class="link-secondary text-decoration-none">品牌故事</a>
+          <a href="#" class="link-secondary text-decoration-none">隱私權政策</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

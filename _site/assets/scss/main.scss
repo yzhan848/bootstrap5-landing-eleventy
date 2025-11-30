@@ -1,0 +1,58 @@
+@import "variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+.page {
+  &--home {
+    background-color: $body-bg;
+  }
+}
+
+.hero {
+  padding: 6rem 0 4rem;
+
+  &__badge {
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    max-width: 32rem;
+  }
+}
+
+.plan-grid {
+  &__item {
+    border-radius: $border-radius-lg;
+  }
+
+  &__price {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+
+.feature-list {
+  &__item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  &__icon {
+    flex: 0 0 auto;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.site-footer {
+  font-size: 0.9rem;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title or "GlowLab Shampoo - RWD Landing" }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ description or '專為髮廊品牌打造的洗髮精品牌形象網站示範。' }}" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body class="page page--home">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <span class="text-primary">Glow</span>Lab
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="切換導覽"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#features">產品特色</a></li>
+            <li class="nav-item"><a class="nav-link" href="#plans">方案價格</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">索取試用</a></li>
+          </ul>
+          <a href="#contact" class="btn btn-primary ms-lg-3 mt-2 mt-lg-0">立即諮詢</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <footer class="site-footer border-top py-4 mt-5">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <div class="text-muted">
+          © <span data-year></span> GlowLab Shampoo. All rights reserved.
+        </div>
+        <div class="d-flex gap-3">
+          <a href="#" class="link-secondary text-decoration-none">品牌故事</a>
+          <a href="#" class="link-secondary text-decoration-none">隱私權政策</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

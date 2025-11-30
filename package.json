@@ -1,0 +1,19 @@
+{
+  "name": "bootstrap5-landing-eleventy",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "sass": "sass src/assets/scss/main.scss:src/assets/css/main.css --no-source-map --style=compressed",
+    "sass:watch": "sass --watch src/assets/scss/main.scss:src/assets/css/main.css --no-source-map",
+    "start": "yarn sass:watch & yarn dev"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "sass": "^1.80.0"
+  }
+}
