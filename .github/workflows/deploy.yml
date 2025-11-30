@@ -1,0 +1,55 @@
+name: Deploy Eleventy site to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]   # 如果你的分支叫 master，就改成 "master"
+  workflow_dispatch:        # 可以在 GitHub 介面手動觸發
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build CSS (Sass → main.css)
+        run: npm run sass
+
+      - name: Build Eleventy site
+        run: npm run build
+        # 這行會依照 package.json 的 "build": "eleventy"
+        # 在 _site/ 資料夾輸出靜態頁面
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
